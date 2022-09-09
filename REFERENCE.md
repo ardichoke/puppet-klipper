@@ -12,7 +12,9 @@
 
 #### Private Classes
 
+* `klipper::configure`: Handles configuration of klipper
 * `klipper::install`: Perform baseline install of Klipper
+* `klipper::service`: Manage the klipper service
 
 ## Classes
 
@@ -37,6 +39,7 @@ The following parameters are available in the `klipper` class:
 * [`user`](#user)
 * [`python_dir`](#python_dir)
 * [`config_dir`](#config_dir)
+* [`log_path`](#log_path)
 
 ##### <a name="src_path"></a>`src_path`
 
@@ -77,4 +80,12 @@ Data type: `Stdlib::Absolutepath`
 The path to place klipper config files
 
 Default value: `"/home/${klipper::user}/klipper_config"`
+
+##### <a name="log_path"></a>`log_path`
+
+Data type: `Stdlib::Absolutepath`
+
+Where to store the klipper logs
+
+Default value: `"/home/${klipper::user}/klipper_logs"`
 

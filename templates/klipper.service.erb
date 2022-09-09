@@ -1,0 +1,23 @@
+# MANAGED BY PUPPET
+# Systemd Klipper Service
+
+[Unit]
+Description=Systemd Klipper Service
+Documentation=https://www.klipper3d.org/
+After=network.target
+Wants=udev.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Environment=KLIPPER_CONFIG=<%= scope['klipper::config_dir'] %>/printer.cfg
+Environment=KLIPPER_LOG=<%= scope['klipper::log_path'] %>/klippy.log
+Environment=KLIPPER_SOCKET=/tmp/klippy_uds
+Environment=KLIPPER_PRINTER=/tmp/printer
+Type=simple
+User=<%= scope['klipper::user'] %>
+RemainAfterExit=yes
+ExecStart=<%= scope['klipper::python_dir'] %>/bin/python <%= scope['klipper::src_path'] %>/klippy/klippy.py ${KLIPPER_CONFIG} -I ${KLIPPER_PRINTER} -l ${KLIPPER_LOG} -a ${KLIPPER_SOCKET}
+Restart=always
+RestartSec=10

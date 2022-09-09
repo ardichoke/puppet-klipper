@@ -47,4 +47,10 @@ class klipper::install {
     subscribe   => Vcsrepo[$klipper::src_path],
     user        => $klipper::user,
   }
+
+  file { $klipper::log_path:
+    ensure => directory,
+    owner  => $klipper::user,
+    mode   => '0755',
+  }
 }
