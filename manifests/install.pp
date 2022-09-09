@@ -17,7 +17,7 @@ class klipper::install {
     'avr-libc',
     'stm32flash',
     'dfu-util',
-    'ibnewlib-arm-none-eabi',
+    'libnewlib-arm-none-eabi',
     'gcc-arm-none-eabi',
     'binutils-arm-none-eabi',
     'libusb-1.0',
