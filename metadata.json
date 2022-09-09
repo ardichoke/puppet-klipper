@@ -2,9 +2,10 @@
   "name": "ardichoke-klipper",
   "version": "0.1.0",
   "author": "Ryan DeShone",
-  "summary": "",
+  "summary": "Install and manage Klipper",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/ardichoke/puppet-klipper",
+  "issues_url": "https://github.com/ardichoke/puppet-klipper/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
