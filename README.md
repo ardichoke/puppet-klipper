@@ -9,5 +9,6 @@ and configure klipper using the standard defaults for a Raspbian system.
 
 ## Limitations
 
-In the Limitations section, list any incompatibilities, known issues, or other
-warnings.
+This module is pretty limited at the moment. It does the baseline install and service management
+makes sure necessary paths and files are present, but it doesn't currently have the ability to
+manage actual printer configuration.
