@@ -15,9 +15,9 @@ class klipper::install {
     'gcc-avr',
     'binutils-avr',
     'avr-libc',
-    'stb32flash',
+    'stm32flash',
     'dfu-util',
-    'libnweb-arm-none-eabi',
+    'ibnewlib-arm-none-eabi',
     'gcc-arm-none-eabi',
     'binutils-arm-none-eabi',
     'libusb-1.0',
@@ -32,7 +32,7 @@ class klipper::install {
   vcsrepo { $klipper::src_path:
     ensure   => $klipper::version,
     provider => 'git',
-    source   => 'https://github.com/Klipper3d/klipper.git',
+    source   => 'https://github.com/Klipper3d/klipper',
     user     => $klipper::user,
     require  => Package['git'],
   }
