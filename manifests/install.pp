@@ -42,7 +42,7 @@ class klipper::install {
     user    => $klipper::user,
   }
   ~> exec { 'Install Klipper python modules':
-    command     => "${klipper::python_dir}/bin/pip install -r ${klipper::python_dir}/scripts/klippy-requirements.txt",
+    command     => "${klipper::python_dir}/bin/pip install -r ${klipper::src_path}/scripts/klippy-requirements.txt",
     refreshonly => true,
     subscribe   => Vcsrepo[$klipper::src_path],
     user        => $klipper::user,
