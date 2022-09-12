@@ -1,6 +1,6 @@
 {
   "name": "ardichoke-klipper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Ryan DeShone",
   "summary": "Install and manage Klipper",
   "license": "Apache-2.0",
