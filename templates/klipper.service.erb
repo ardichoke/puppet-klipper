@@ -21,3 +21,4 @@ RemainAfterExit=yes
 ExecStart=<%= scope['klipper::python_dir'] %>/bin/python <%= scope['klipper::src_path'] %>/klippy/klippy.py ${KLIPPER_CONFIG} -I ${KLIPPER_PRINTER} -l ${KLIPPER_LOG} -a ${KLIPPER_SOCKET}
 Restart=always
 RestartSec=10
+Nice=-5
