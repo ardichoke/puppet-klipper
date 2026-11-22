@@ -32,12 +32,12 @@ class klipper::install {
   vcsrepo { $klipper::src_path:
     ensure   => $klipper::version,
     provider => 'git',
-    source   => 'https://github.com/Klipper3d/klipper',
+    source   => 'https://github.com/Klipper3d/klipper.git',
     user     => $klipper::user,
     require  => Package['git'],
   }
   -> exec { 'Initialize Klipper virtualenv':
-    command => "virtualenv -p python2 ${klipper::python_dir}",
+    command => "virtualenv -p python3 ${klipper::python_dir}",
     creates => $klipper::python_dir,
     user    => $klipper::user,
   }
